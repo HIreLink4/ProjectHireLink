@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // 1. Necessary for the router to work
-import '../App.css'; // 2. Use double dots to go up to the src folder
+import '../style/UserLogin.css'; // 2. Use double dots to go up to the src folder
 
 const Login = () => {
   const navigate = useNavigate(); // 3. Hook must be inside the component

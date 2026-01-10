@@ -42,7 +42,7 @@ function Home() {
           <button className="btn outline" onClick={() => navigate("/login")}>
             <FaUser /> User Login
           </button>
-          <button className="btn provider">
+          <button className="btn provider" onClick={() => navigate("/ServiceProviderLogin")}>
             <FaTools /> Join as Provider
           </button>
         </div>

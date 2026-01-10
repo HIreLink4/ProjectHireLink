@@ -1,0 +1,155 @@
+/* User Registeration*/
+:root {
+  --primary-blue: #003366;
+  --accent-orange: #ff8c00;
+  --bg-light: #f4f7fa;
+  --hirelink-blue: #1e3a8a;
+  --hirelink-orange: #f97316;
+  --hirelink-orange-hover: #ea580c;
+  --text-dark: #1f2937;
+  --text-gray: #6b7280;
+}
+.page-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:linear-gradient(135deg,#fb923c,#2563eb);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+/* Card Styling */
+.registration-card {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  height: 650px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Left Brand Section */
+.brand-section {
+  flex: 1;
+  background-color: var(--hirelink-blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.brand-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.accent-line {
+  width: 95px;
+  height: 5px;
+  background-color: var(--hirelink-orange);
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+/* Right Form Section */
+.form-section {
+  flex: 1.2;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.form-section h2 {
+  color: var(--text-dark);
+  margin-bottom: 30px;
+  font-size: 1.75rem;
+}
+
+/* Form Controls */
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-gray);
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  border-color: var(--hirelink-blue);
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.password-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Button & Link Styling */
+.register-btn {
+  width: 100%;
+  background-color: var(--hirelink-orange);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: var(--hirelink-orange-hover);
+}
+
+.footer-link {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: var(--text-gray);
+}
+
+.footer-link a {
+  color: var(--hirelink-blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .registration-card {
+    flex-direction: column;
+    height: auto;
+    max-width: 450px;
+  }
+  .brand-section {
+    padding: 30px;
+  }
+}
