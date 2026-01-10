@@ -24,7 +24,7 @@ const Login = () => {
         <div className="brand-header">
           {/* Use navigate("/") to go back home */}
           <h1 className="logo" onClick={() => navigate("/")} style={{cursor: 'pointer'}}>
-            Hire<span>Link</span>
+            <span color="#fb923c">Hire</span><span style={{color: '#2563eb'}}>Link</span>
           </h1>
           <p className="tagline">The bridge to your next career move</p>
         </div>
@@ -68,7 +68,7 @@ const Login = () => {
 
         <footer className="card-footer">
           <span>Don't have an account?</span>
-          <button className="btn-secondary">Register Now</button>
+          <button className="btn-secondary" onClick={() => navigate("/Register")}>Register Now</button>
         </footer>
       </div>
     </div>
