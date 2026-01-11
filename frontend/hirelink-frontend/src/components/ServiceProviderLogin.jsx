@@ -104,11 +104,10 @@ const ServiceProviderLogin = () => {
               />
             </div>
           </div>
-
           <button type="submit" className="hl-btn-primary">Login as Provider</button>
           
           <footer className="hl-footer">
-            <p>Doesn't have an account? <a href="/login">Register</a></p>
+            <p>Doesn't have an account? <a href="create">Register</a></p>
           </footer>
         </form>
       </div>

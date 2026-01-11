@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // 1. Necessary for the router to work
 import '../style/UserLogin.css'; // 2. Use double dots to go up to the src folder
-
 const Login = () => {
   const navigate = useNavigate(); // 3. Hook must be inside the component
   const [credentials, setCredentials] = useState({ username: '', password: '' });
@@ -53,7 +52,7 @@ const Login = () => {
           </div>
 
           <div className="form-actions">
-            <a href="#" className="forgot-link">Forgot password?</a>
+            <a href="/UserForgetPassword" className="forgot-link">Forgot password?</a>
           </div>
 
           <button type="submit" className="btn-primary">Sign In</button>

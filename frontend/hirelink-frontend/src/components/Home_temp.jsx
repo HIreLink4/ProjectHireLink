@@ -52,7 +52,7 @@ function Home() {
       <section className="hero">
         <div className="hero-card">
           <h1>Hire Trusted Services Near You</h1>
-          <p>Verified workers • Quick booking • Location based</p>
+          <p> • Verified workers • Quick booking • Location based</p>
 
           <div className="location-box">
             <FaMapMarkerAlt className="location-icon" />
