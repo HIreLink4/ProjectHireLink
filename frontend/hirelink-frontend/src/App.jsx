@@ -5,6 +5,8 @@ import Login from "./components/UserLogin";
 import Register from "./components/UserRegister";
 import ServiceProviderLogin from "./components/ServiceProviderLogin";
 import UserForgetPassword from "./components/UserForgetPassword";
+import ProviderRegister from "./components/ProviderRegister";
+import ProvidersList from "./components/ProvidersList";
 function App() {
   return (
     <Router>
@@ -14,6 +16,8 @@ function App() {
         <Route path="/Register" element={<Register />} />
         <Route path="/ServiceProviderLogin" element={<ServiceProviderLogin />} />
         <Route path="/UserForgetPassword" element={<UserForgetPassword />} />
+        <Route path="/ProviderRegister" element={<ProviderRegister />} />
+        <Route path="/ProvidersList" element={<ProvidersList />} />
       </Routes>
     </Router>
   );

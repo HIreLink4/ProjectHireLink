@@ -55,7 +55,7 @@ function Home() {
           </div>
 
           <div className="hero-buttons">
-            <button className="btn primary">Find Services</button>
+            <button className="btn primary" onClick={() => navigate("/ProvidersList")}>Find Services</button>
           </div>
 
           <div className="features">
