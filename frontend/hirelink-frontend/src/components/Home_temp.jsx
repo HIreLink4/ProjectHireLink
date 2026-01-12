@@ -1,34 +1,24 @@
 import React, { useState } from "react";
-import { FaComments, FaUser, FaTools, FaMapMarkerAlt } from "react-icons/fa";
+import { FaComments, FaUser, FaTools, FaMapMarkerAlt, FaTimes, FaPaperPlane } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../App.css";
 
 const categories = [
-  "Electrician",
-  "Plumber",
-  "Carpenter",
-  "Painter",
-  "Construction Labour",
-  "Cleaner",
-  "Mechanic",
-  "AC Technician",
-  "Welder",
-  "Gardener",
-  "Mason",
-  "House Helper",
-  "Security Guard",
-  "Appliance Repair",
-  "General Labour"
+  "Electrician", "Plumber", "Carpenter", "Painter", "Construction Labour",
+  "Cleaner", "Mechanic", "AC Technician", "Welder", "Gardener",
+  "Mason", "House Helper", "Security Guard", "Appliance Repair", "General Labour"
 ];
 
 function Home() {
   const [location, setLocation] = useState("");
+  const [isChatOpen, setIsChatOpen] = useState(false); // State to toggle chat
   const navigate = useNavigate(); 
+
   return (
     <div className="page">
 
-      {/* Header */}
+      {/* 1. Header */}
       <header className="header">
         <div className="logo-container">
           <img src={logo} alt="HireLink Logo" className="logo-img" />
@@ -48,7 +38,7 @@ function Home() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* 2. Hero Section */}
       <section className="hero">
         <div className="hero-card">
           <h1>Hire Trusted Services Near You</h1>
@@ -77,7 +67,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Advertisement */}
+      {/* 3. Advertisement Section */}
       <section className="advertisement">
         <div className="ad-card">
           <h3>Sponsored</h3>
@@ -85,7 +75,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Categories */}
+      {/* 4. Categories Section */}
       <section className="categories">
         <h2>Services Available on HireLink</h2>
         <div className="category-grid">
@@ -97,12 +87,40 @@ function Home() {
         </div>
       </section>
 
-      {/* Chatbot Icon */}
-      <div className="chatbot-icon" title="Chat with HireLink Assistant">
-        <FaComments />
+      {/* 5. Chatbot Icon Toggle */}
+      <div 
+        className={`chatbot-icon ${isChatOpen ? 'active' : ''}`} 
+        onClick={() => setIsChatOpen(!isChatOpen)}
+        title="Chat with HireLink Assistant"
+      >
+        {isChatOpen ? <FaTimes /> : <FaComments />}
       </div>
 
-      {/* Footer */}
+      {/* 6. Chat Window Popup */}
+      {isChatOpen && (
+        <div className="chat-popup">
+          <div className="chat-header">
+            <div>
+              <h4>HireLink Assistant</h4>
+              <span className="online-status">● Online</span>
+            </div>
+            <FaTimes className="close-icon" onClick={() => setIsChatOpen(false)} />
+          </div>
+          <div className="chat-body">
+            <div className="message bot">
+              Hello! How can I help you find a service today?
+            </div>
+          </div>
+          <div className="chat-footer">
+            <input type="text" placeholder="Ask something..." autoFocus />
+            <button className="send-btn">
+              <FaPaperPlane />
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* 7. Footer */}
       <footer className="footer">
         © HireLink – A platform to connect service providers with users seeking reliable services.
       </footer>
